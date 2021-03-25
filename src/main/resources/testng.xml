@@ -3,7 +3,7 @@
 <suite name="FREE CRM Application Test Automation Test Suite">
 
 	<listeners>
-		<listener class-name="com.crm.qa.util.ExtentReporterNG" />
+		<listener class-name="com.crm.qa.util.ExtentReportListener" />
 	</listeners>
 
 

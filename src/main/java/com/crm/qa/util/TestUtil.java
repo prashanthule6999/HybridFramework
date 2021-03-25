@@ -39,9 +39,9 @@ public class TestUtil extends TestBase {
 		}
 		try {
 			book = WorkbookFactory.create(file);
-		} catch (InvalidFormatException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
+		} /*
+			 * catch (InvalidFormatException e) { e.printStackTrace(); }
+			 */catch (IOException e) {
 			e.printStackTrace();
 		}
 		sheet = book.getSheet(sheetName);
@@ -61,6 +61,23 @@ public class TestUtil extends TestBase {
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		String currentDir = System.getProperty("user.dir");
 		FileUtils.copyFile(scrFile, new File(currentDir + "/screenshots/" + System.currentTimeMillis() + ".png"));
+	}
+
+	public static String getScreenshot() {
+		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		// File srcFile = new File(src);
+
+		String path = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";
+		File destination = new File(path);
+
+		try {
+			FileUtils.copyFile(srcFile, destination);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return path;
+
 	}
 
 	public static void runTimeInfo(String messageType, String message) throws InterruptedException {
