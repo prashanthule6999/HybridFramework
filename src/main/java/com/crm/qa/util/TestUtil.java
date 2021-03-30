@@ -4,6 +4,10 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -67,7 +71,7 @@ public class TestUtil extends TestBase {
 		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		// File srcFile = new File(src);
 
-		String path = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";
+		String path = System.getProperty("user.dir") + "/screenshots/" + getCurrentTime() + ".png";
 		File destination = new File(path);
 
 		try {
@@ -113,5 +117,11 @@ public class TestUtil extends TestBase {
 //		js.executeScript("$.growl.notice({ title: 'Notice', message: 'your notice message goes here' });");
 //		js.executeScript("$.growl.warning({ title: 'Warning!', message: 'your warning message goes here' });");
 		Thread.sleep(5000);
+	}
+
+	public static String getCurrentTime() {
+		DateFormat customDate = new SimpleDateFormat("MM_dd_yyyy HH_mm_ss");
+		Date currentDate = new Date();
+		return customDate.format(currentDate);
 	}
 }

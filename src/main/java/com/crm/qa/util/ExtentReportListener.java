@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
@@ -23,7 +25,7 @@ import com.crm.qa.base.TestBase;
 public class ExtentReportListener extends TestBase implements ITestListener {
 
 	private static final String OUTPUT_FOLDER = "./reports/";
-	private static final String FILE_NAME = "ExtentReport.html";
+	private static final String FILE_NAME = "ExtentReport" + TestUtil.getCurrentTime() + ".html";
 
 	private static ExtentReports extent = init();
 	public static ThreadLocal<ExtentTest> test = new ThreadLocal<ExtentTest>();
