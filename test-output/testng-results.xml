@@ -1,70 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="FREE CRM Application Test Automation Test Suite" duration-ms="25702" started-at="2021-03-30T11:58:14Z" finished-at="2021-03-30T11:58:39Z">
+  <suite name="FREE CRM Application Test Automation Test Suite" duration-ms="26317" started-at="2021-05-18T05:09:47Z" finished-at="2021-05-18T05:10:13Z">
     <groups>
     </groups>
-    <test name="Free CRM App Test Cases" duration-ms="25702" started-at="2021-03-30T11:58:14Z" finished-at="2021-03-30T11:58:39Z">
+    <test name="Free CRM App Test Cases" duration-ms="26317" started-at="2021-05-18T05:09:47Z" finished-at="2021-05-18T05:10:13Z">
       <class name="com.crm.qa.testcases.LoginPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.qa.testcases.LoginPageTest@4516af24]" name="setUp" is-config="true" duration-ms="14400" started-at="2021-03-30T11:58:14Z" finished-at="2021-03-30T11:58:28Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.qa.testcases.LoginPageTest@4516af24]" name="setUp" is-config="true" duration-ms="12855" started-at="2021-05-18T05:09:47Z" finished-at="2021-05-18T05:10:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="loginPageTitleTest()[pri:1, instance:com.crm.qa.testcases.LoginPageTest@4516af24]" name="loginPageTitleTest" duration-ms="128" started-at="2021-03-30T11:58:28Z" finished-at="2021-03-30T11:58:28Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [CRMPRO  - CRM software for customer relationship management, sales, and support.] but found [CRMPRO - CRM software for customer relationship management, sales, and support.]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [CRMPRO  - CRM software for customer relationship management, sales, and support.] but found [CRMPRO - CRM software for customer relationship management, sales, and support.]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at org.testng.Assert.assertEquals(Assert.java:463)
-at com.crm.qa.testcases.LoginPageTest.loginPageTitleTest(LoginPageTest.java:29)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="loginPageTitleTest()[pri:1, instance:com.crm.qa.testcases.LoginPageTest@4516af24]" name="loginPageTitleTest" duration-ms="66" started-at="2021-05-18T05:10:00Z" finished-at="2021-05-18T05:10:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginPageTitleTest -->
-        <test-method status="PASS" signature="crmLogoImageTest()[pri:2, instance:com.crm.qa.testcases.LoginPageTest@4516af24]" name="crmLogoImageTest" duration-ms="218" started-at="2021-03-30T11:58:32Z" finished-at="2021-03-30T11:58:32Z">
+        <test-method status="PASS" signature="crmLogoImageTest()[pri:2, instance:com.crm.qa.testcases.LoginPageTest@4516af24]" name="crmLogoImageTest" duration-ms="287" started-at="2021-05-18T05:10:00Z" finished-at="2021-05-18T05:10:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- crmLogoImageTest -->
-        <test-method status="PASS" signature="loginTest()[pri:3, instance:com.crm.qa.testcases.LoginPageTest@4516af24]" name="loginTest" duration-ms="5449" started-at="2021-03-30T11:58:32Z" finished-at="2021-03-30T11:58:38Z">
+        <test-method status="PASS" signature="loginTest(java.lang.String, java.lang.String)[pri:3, instance:com.crm.qa.testcases.LoginPageTest@4516af24]" name="loginTest" duration-ms="9875" started-at="2021-05-18T05:10:02Z" data-provider="getData" finished-at="2021-05-18T05:10:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Selenium_50]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abcd@123456]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crm.qa.testcases.LoginPageTest@4516af24]" name="tearDown" is-config="true" duration-ms="1676" started-at="2021-03-30T11:58:38Z" finished-at="2021-03-30T11:58:39Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crm.qa.testcases.LoginPageTest@4516af24]" name="tearDown" is-config="true" duration-ms="1581" started-at="2021-05-18T05:10:12Z" finished-at="2021-05-18T05:10:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
