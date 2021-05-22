@@ -1,13 +1,11 @@
 package com.crm.qa.testcases;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.LoginPage;
-import com.crm.qa.util.TestUtil;
 
 public class LoginPageTest extends TestBase {
 	LoginPage loginPage;
@@ -17,7 +15,7 @@ public class LoginPageTest extends TestBase {
 		super();
 	}
 
-	@BeforeTest
+	@BeforeClass
 	public void setUp() {
 		initialization();
 		loginPage = new LoginPage();
@@ -36,24 +34,24 @@ public class LoginPageTest extends TestBase {
 	}
 
 	// Using config file
+
+	@Test(priority = 3)
+	public void loginTest() {
+		loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+	}
+
 	/*
-	 * @Test(priority = 3) public void loginTest() {
-	 * loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-	 * }
+	 * // Using DataProvider Annotation
+	 * 
+	 * @DataProvider public Object[][] getData() { return
+	 * TestUtil.getTestData(sheetName); }
+	 * 
+	 * @Test(priority = 3, dataProvider = "getData") public void loginTest(String
+	 * username, String password) { dashboardPage = loginPage.login(username,
+	 * password); }
 	 */
 
-	//Using DataProvider Annotation
-	@DataProvider
-	public Object[][] getData() {
-		return TestUtil.getTestData(sheetName);
-	}
-
-	@Test(priority = 3, dataProvider = "getData")
-	public void loginTest(String username, String password) throws InterruptedException {
-		loginPage.login(username, password);
-	}
-
-	@AfterTest
+	@AfterClass
 	public void tearDown() {
 		driver.quit();
 	}

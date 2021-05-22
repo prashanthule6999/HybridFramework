@@ -11,6 +11,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -29,8 +30,8 @@ public class TestUtil extends TestBase {
 	static Sheet sheet;
 	static JavascriptExecutor js;
 
-	public void switchToFrame() {
-		driver.switchTo().frame("mainpanel");
+	public static void switchToFrame() {
+		driver.switchTo().frame(driver.findElement(By.tagName("frameset")).findElements(By.tagName("frame")).get(1));
 	}
 
 	public static Object[][] getTestData(String sheetName) {
