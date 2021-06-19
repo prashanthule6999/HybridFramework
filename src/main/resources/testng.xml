@@ -9,8 +9,8 @@
 	<test name="Free CRM App Test Cases">
 		<classes>
 			<class name="com.crm.qa.testcases.LoginPageTest"></class>
-			<class name="com.crm.qa.testcases.DashboardPageTest"></class>
-			<class name="com.crm.qa.testcases.ContactPageTest"></class>
+<!-- 			<class name="com.crm.qa.testcases.DashboardPageTest"></class>
+			<class name="com.crm.qa.testcases.ContactPageTest"></class> -->
 		</classes>
 	</test>
 </suite>
