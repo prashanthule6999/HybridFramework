@@ -21,8 +21,10 @@ import com.crm.qa.base.TestBase;
 public class ExtentReportListener extends TestBase implements ITestListener {
 
 	private static final String OUTPUT_FOLDER = "./reports/";
-	private static final String FILE_NAME = "ExtentReport" + TestUtil.getCurrentTime() + ".html";
+	//private static final String FILE_NAME = "ExtentReport" + TestUtil.getCurrentTime() + ".html";
+	private static final String FILE_NAME = "ExtentReport.html";
 
+	
 	private static ExtentReports extent = init();
 	public static ThreadLocal<ExtentTest> test = new ThreadLocal<ExtentTest>();
 
