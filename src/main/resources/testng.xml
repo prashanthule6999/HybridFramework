@@ -4,14 +4,13 @@
 
 	<listeners>
 		<listener class-name="com.crm.qa.util.ExtentReportListener" />
-		<listener class-name="com.crm.qa.util.TestAllureListener" />
 	</listeners>
-
 
 	<test name="Free CRM App Test Cases">
 		<classes>
 			<class name="com.crm.qa.testcases.LoginPageTest"></class>
 			<class name="com.crm.qa.testcases.DashboardPageTest"></class>
+			<class name="com.crm.qa.testcases.ContactPageTest"></class>
 		</classes>
 	</test>
 </suite>

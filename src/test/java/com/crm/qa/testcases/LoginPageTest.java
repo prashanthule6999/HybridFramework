@@ -3,13 +3,10 @@ package com.crm.qa.testcases;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.LoginPage;
-import com.crm.qa.util.TestAllureListener;
 
-@Listeners(TestAllureListener.class)
 public class LoginPageTest extends TestBase {
 	LoginPage loginPage;
 	String sheetName = "Credentials";

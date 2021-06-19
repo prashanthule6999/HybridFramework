@@ -3,15 +3,12 @@ package com.crm.qa.testcases;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.DashboardPage;
 import com.crm.qa.pages.LoginPage;
-import com.crm.qa.util.TestAllureListener;
 import com.crm.qa.util.TestUtil;
 
-@Listeners(TestAllureListener.class)
 public class DashboardPageTest extends TestBase {
 	LoginPage loginPage;
 	DashboardPage dashboardPage;
