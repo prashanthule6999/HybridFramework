@@ -15,6 +15,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 import com.crm.qa.base.TestBase;
 
@@ -29,6 +32,11 @@ public class TestUtil extends TestBase {
 	static Workbook book;
 	static Sheet sheet;
 	static JavascriptExecutor js;
+
+	public static void mouseOver(WebElement webEle) {
+		Actions a = new Actions(driver);
+		a.moveToElement(webEle).build().perform();
+	}
 
 	public static void switchToFrame() {
 		driver.switchTo().frame(driver.findElement(By.tagName("frameset")).findElements(By.tagName("frame")).get(1));
@@ -123,5 +131,18 @@ public class TestUtil extends TestBase {
 		DateFormat customDate = new SimpleDateFormat("MM_dd_yyyy HH_mm_ss");
 		Date currentDate = new Date();
 		return customDate.format(currentDate);
+	}
+
+	public static void selectByValue(WebElement webEle, String value) {
+		Select sel = new Select(webEle);
+		sel.selectByValue(value);
+	}
+
+	public static void sendkeys(WebElement webEle, String value) {
+		webEle.sendKeys(value);
+	}
+
+	public static void click(WebElement webEle) {
+		webEle.click();
 	}
 }
